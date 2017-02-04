@@ -11,7 +11,9 @@ var User = sequelize.define('User', {
     a GET request with all users in the database */
 
 
-
+app.get('/users', function(req, res){
+	res.end(User.findAll());
+});
 module.exports = { 
   app: app,
   User: User
