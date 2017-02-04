@@ -19,14 +19,15 @@ angular.module('app', ['ngRoute'])
     are named what $routeProvider and the partials are expecting  */
 
   .factory('counter', function($scope){
-    $scope.counter=1;
+    //var counter=1;
+    //return counter;
   })
   .controller('fizzbuzzCtrl', function($scope){
     $scope.increment =function(){
       $scope.counter++;
     };
     if($scope.counter%3===0)
-      $scope.display='FIZZ'
+      $ctrl.display='FIZZ'
     else if($scope.counter%5===0)
       $scope.display= 'BUZZ'
     else if($scope.counter%3===0 && $scope.counter%5===0)
